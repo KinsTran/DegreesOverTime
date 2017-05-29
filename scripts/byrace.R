@@ -7,9 +7,9 @@ df <- read.csv("data/Bach_Degrees_By_Race.csv", header = TRUE, stringsAsFactors 
 
 BuildGraph <- function() {
   
-  majors <- df[, 'Field.of.study']
-  amounts1 <- df[, 'X2013.14.Total']
-  amounts2 <- df[, 'X2014.15.Total']
+  majors <- df[2:37, 'Field.of.study']
+  amounts1 <- df[2:37, 'X2013.14.Total']
+  amounts2 <- df[2:37, 'X2014.15.Total']
     
   p <- plot_ly(
     x = ~majors,

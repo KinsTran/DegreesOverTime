@@ -10,8 +10,8 @@ shinyServer(function(input, output) {
   output$race <- renderPlotly({
     return(BuildGraph())
   })
-  # output$gender <- NULL
+  # output$gender
   #   
-  # output$degrees <- NULL
+  # output$degrees 
   
 })
