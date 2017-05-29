@@ -1,19 +1,23 @@
 # ui.R
 library(shiny)
 library(plotly)
+library(shinythemes)
 
-shinyUI(navbarPage("Bachelor Degrees Over Time",
-  tabPanel("Race",
-           titlePanel("Bachelor Degrees by Race"),
-           sidebarLayout(
-             sidebarPanel(
-               
-             )
-           ),
-           
-    mainPanel(
-      plotlyOutput("race")
-    )
+shinyUI(
+  navbarPage(
+    theme = shinytheme("yeti"),
+    "Bachelor Degrees Over Time",
+    tabPanel("Race",
+             titlePanel("Bachelor Degrees by Race"),
+             # sidebarLayout(
+             #   sidebarPanel(
+             #     
+             #   )
+             # ),
+             
+      mainPanel(
+        plotlyOutput("race")
+      )
   )
   # ,
   # tabPanel("Gender",
