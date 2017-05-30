@@ -37,7 +37,7 @@ shinyUI(
   #          ),
   #          
   #          mainPanel(
-  #            plotlyOutput("gender")
+  #            plotOutput("gender")
   #          )
   # ),
   # tabPanel("Degrees",
