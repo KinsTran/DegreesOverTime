@@ -1,7 +1,5 @@
 # library(dplyr)
 # library(plotly)
-# 
-# setwd('C:/Users/Wendy/Google Drive/UW/2016-17/INFO201/DegreesOverTime')
 
 all.years <- read.csv("data/Bach_Degrees_By_Race.csv", header = TRUE, stringsAsFactors = FALSE)
 first.years <- read.csv("data/Bach_Degrees_By_Race_13_14.csv", header = TRUE, stringsAsFactors = FALSE)
