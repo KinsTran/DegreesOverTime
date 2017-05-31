@@ -3,8 +3,6 @@ library(shiny)
 library(plotly)
 library(shinythemes)
 
-df <- read.csv("data/Bach_Degrees_By_Race.csv", header = TRUE, stringsAsFactors = FALSE)
-
 shinyUI(
   navbarPage(
     theme = shinytheme("yeti"),
@@ -16,7 +14,7 @@ shinyUI(
                  width = 2,
                  radioButtons(inputId = "year",
                               label = "Select the School Year",
-                              choices = c("2013-14", "2014-15"))
+                              choices = c("2013-15", "2013-14", "2014-15"))
                  # selectInput(inputId = "races",
                  #             label = "Select Race to Filter Down to",
                  #             choices = df[1, 2:19])
@@ -37,7 +35,7 @@ shinyUI(
   #          ),
   #          
   #          mainPanel(
-  #            plotlyOutput("gender")
+  #            plotOutput("gender")
   #          )
   # ),
   # tabPanel("Degrees",
