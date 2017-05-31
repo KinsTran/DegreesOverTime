@@ -14,7 +14,7 @@ shinyUI(
                  width = 2,
                  radioButtons(inputId = "year",
                               label = "Select the School Year",
-                              choices = c("2013-15", "2013-14", "2014-15"))
+                              choices = c("2013-15 (All)", "2013-14", "2014-15"))
                  # selectInput(inputId = "races",
                  #             label = "Select Race to Filter Down to",
                  #             choices = df[1, 2:19])

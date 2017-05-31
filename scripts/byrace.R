@@ -4,6 +4,8 @@
 all.years <- read.csv("data/Bach_Degrees_By_Race.csv", header = TRUE, stringsAsFactors = FALSE)
 first.years <- read.csv("data/Bach_Degrees_By_Race_13_14.csv", header = TRUE, stringsAsFactors = FALSE)
 second.years <- read.csv("data/Bach_Degrees_By_Race_14_15.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# Cleans up the column names
 colnames(all.years) <- gsub("\\.", " ", colnames(all.years))
 colnames(all.years) <- gsub("X", "", colnames(all.years))
 colnames(first.years) <- gsub("\\.", " ", colnames(first.years))
@@ -15,7 +17,7 @@ BuildGraph <- function(year) {
   
   majors <- first.years[2:37, 'Field of study']
   
-  if(year == "2013-15") {
+  if(year == "2013-15 (All)") {
     amounts1 <- first.years[2:37, '2013 14 Total']
     label1 <- '2013-14 Majors'
     amounts2 <- second.years[2:37, '2014 15 Total']
@@ -42,7 +44,7 @@ BuildGraph <- function(year) {
            height = 700,
            margin = list(b = 300, r = 200, t = 50))
   
-  if(year == "2013-15") {
+  if(year == "2013-15 (All)") {
     p <- p %>%
       add_trace(y = ~amounts2, 
                 name = label2)     
