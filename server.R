@@ -9,7 +9,7 @@ source('./scripts/byGender.R')
 
 shinyServer(function(input, output) { 
   output$race <- renderPlotly({
-    return(BuildGraph(input$year))
+    return(BuildGraph(input$year, input$races))
   })
   
   # output$gender <- renderPlot({
