@@ -7,8 +7,9 @@ source('./scripts/byrace.R')
 
 shinyServer(function(input, output) { 
   output$race <- renderPlotly({
-    return(BuildGraph())
+    return(BuildGraph(input$year))
   })
+  
   #output$gender <- renderPlot({
   #  return(genderPlot())
   #})
