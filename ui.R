@@ -24,20 +24,20 @@ shinyUI(
                 )
              )
              
-  ),
-   tabPanel("Gender",
-            titlePanel("Bachelor Degrees by Gender"),
-            sidebarLayout(
-              sidebarPanel(
-                checkboxGroupInput("checkGroup", label = "Gender and School Year to Display", 
-                                   choices = list("Females 2013-2014" = "F1", "Males 2013-2014" = "M1", "Females 2014-2015" = "F2", "Males 2014-2015" = "M2"),
-                                   selected = "F1", "M1", "F2", "M2")
-              )
-            ),
-            mainPanel( # Plan: Add option to toggle majors by groups: Ex: STEM, Social sciences, Humanities, etc.
-              plotOutput("gender")
-            )
    )#,
+  #  tabPanel("Gender",
+  #           titlePanel("Bachelor Degrees by Gender"),
+  #           sidebarLayout(
+  #             sidebarPanel(
+  #               checkboxGroupInput("checkGroup", label = "Gender and School Year to Display", 
+  #                                  choices = list("Females 2013-2014" = "F1", "Males 2013-2014" = "M1", "Females 2014-2015" = "F2", "Males 2014-2015" = "M2"),
+  #                                  selected = "F1", "M1", "F2", "M2")
+  #             )
+  #           ),
+  #           mainPanel( # Plan: Add option to toggle majors by groups: Ex: STEM, Social sciences, Humanities, etc.
+  #             plotOutput("gender")
+  #           )
+  #  ),
   # tabPanel("Degrees",
   #          titlePanel("Higher Degrees"),
   #          sidebarLayout(

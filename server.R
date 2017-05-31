@@ -12,9 +12,9 @@ shinyServer(function(input, output) {
     return(BuildGraph(input$year))
   })
   
-  output$gender <- renderPlot({
-    return(GenderChart(input$genders))
-  })
+  # output$gender <- renderPlot({
+  #   return(GenderChart(input$genders))
+  # })
      
   # output$degrees 
   
