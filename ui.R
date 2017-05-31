@@ -3,8 +3,6 @@ library(shiny)
 library(plotly)
 library(shinythemes)
 
-df <- read.csv("data/Bach_Degrees_By_Race.csv", header = TRUE, stringsAsFactors = FALSE)
-
 shinyUI(
   navbarPage(
     theme = shinytheme("yeti"),
