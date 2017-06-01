@@ -31,7 +31,7 @@ shinyUI(
              ),
     tabPanel("Race",
              titlePanel("Bachelor Degrees by Race"),
-             p("This visualization not only allows for a selection of what school year(s) to display, but also the race that the user wants to have the 
+             p("This bar chart not only allows for a selection of what school year(s) to display, but also the race that the user wants to have the 
                graph filter down to. Although there is not a significant difference between the two school years, there is definitely a difference 
                between the amount of postsecondary students for each race. When it comes to majority vs minority, it is apparent that the majority of 
                students are White with Pacific Islanders as the minority in the US. Regardless, Business seems to be a popular major across all races, 
@@ -71,7 +71,8 @@ shinyUI(
                     selected = list("Science"))
               ),
               mainPanel(
-                plotlyOutput("gender")
+                plotlyOutput("gender"),
+                print("If no graph is displayed, make sure at least one gender option and one major option is checked.")
               )
             )
    ),
@@ -102,7 +103,8 @@ shinyUI(
               For example, the number computer science master's degrees had a slight jump in the early 2000s and decayed a bit before steadily increasing again.
               Some graphs are even more complex than that, such as the ethnic/cultural studies field which fluctuates quite a bit over time."),
             sidebarLayout(
-              sidebarPanel(selectInput(inputId = 'level',
+              sidebarPanel(width = 2,
+                           selectInput(inputId = 'level',
                                        label = 'Degree Level',
                                        choices = c("Master's Degrees", "Doctor's Degrees")),
                            selectInput(inputId = 'field',
@@ -147,17 +149,4 @@ shinyUI(
               )
             )
    )
-  #,
-  # tabPanel("Degrees",
-  #          titlePanel("Higher Degrees"),
-  #          sidebarLayout(
-  #            sidebarPanel(
-  #              
-  #            )
-  #          ),
-  #          
-  #          mainPanel(
-  #            plotlyOutput("degrees")
-  #          )
-  # )
 ))

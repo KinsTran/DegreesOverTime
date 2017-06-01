@@ -1,13 +1,10 @@
-# library(dplyr)
-# library(plotly)
+library(dplyr)
+library(plotly)
 
-# all.years <- read.csv("data/Bach_Degrees_By_Race.csv", header = TRUE, stringsAsFactors = FALSE)
 first.years <- read.csv("data/Bach_Degrees_By_Race_13_14.csv", header = TRUE, stringsAsFactors = FALSE)
 second.years <- read.csv("data/Bach_Degrees_By_Race_14_15.csv", header = TRUE, stringsAsFactors = FALSE)
 
 # Cleans up the column names
-# colnames(all.years) <- gsub("\\.", " ", colnames(all.years))
-# colnames(all.years) <- gsub("X", "", colnames(all.years))
 colnames(first.years) <- gsub("\\.", " ", colnames(first.years))
 colnames(first.years) <- gsub("X", "", colnames(first.years))
 colnames(second.years) <- gsub("\\.", " ", colnames(second.years))
@@ -42,7 +39,8 @@ RacesChart <- function(year, races) {
     type = "bar",
     name = label1,
     width = 1500,
-    height = 700) %>%
+    height = 700,
+    marker = list(color = 'rgb(51,0,102)')) %>%
     layout(title = graph.title,
            xaxis = list(title = 'Majors', tickangle = 45),
            yaxis = list(title = 'Amount'), 
@@ -51,7 +49,7 @@ RacesChart <- function(year, races) {
            margin = list(b = 300, r = 200, t = 50))
   
   if(year == "2013-15 (All)") {
-    p <- p %>% add_trace(y = ~amounts2, name = label2)     
+    p <- p %>% add_trace(y = ~amounts2, name = label2, marker = list(color = 'rgb(128,128,128)'))     
   }
   
   return(p)

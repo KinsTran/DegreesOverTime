@@ -1,10 +1,8 @@
 # server.R
-library(dplyr)
 library(shiny)
-library(plotly)
 
 source('./scripts/byrace.R')
-source('./scripts/byGender.R')5
+source('./scripts/byGender.R')
 source('./scripts/byfields.R')
 source('./scripts/graduate.R')
 
@@ -15,6 +13,9 @@ shinyServer(function(input, output) {
   })
   
    output$gender <- renderPlotly({
+     if(is.null(input$genders) || is.null(input$majors)) {
+       return()
+     }
      return(GenderChart(input$genders, input$majors))
    })
      
@@ -26,6 +27,4 @@ shinyServer(function(input, output) {
      return(GradChart(input$level, input$field))
    })
    
-  # output$degrees 
-  
 })

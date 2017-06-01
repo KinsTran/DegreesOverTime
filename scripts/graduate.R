@@ -31,6 +31,7 @@ GradChart <- function(level, field) {
     geom_line() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1),
           axis.title = element_text(vjust=1))
+  
   p <- ggplotly(p, tooltip = c('x', 'y')) %>%
     layout(title = paste(level, "Over Time"),
            yaxis = list(title = field),
