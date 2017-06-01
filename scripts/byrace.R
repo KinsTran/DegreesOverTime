@@ -33,13 +33,13 @@ BuildGraph <- function(year) {
     x = ~majors,
     y = ~amounts1,
     type = "bar",
-    name = label1) %>%
+    name = label1,
+    width = 1500,
+    height = 700) %>%
     layout(xaxis = list(title = 'Majors', tickangle = 45),
            yaxis = list(title = 'Amount'), 
            barmode = 'group',
            autosize = F,
-           width = 1500,
-           height = 700,
            margin = list(b = 300, r = 200, t = 50))
   
   if(year == "2013-15") {
