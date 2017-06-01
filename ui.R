@@ -77,7 +77,9 @@ shinyUI(
    ),
    tabPanel("History",
             titlePanel("Bachelor Degrees Popularity in Each Year"),
-            p("This Chart displays the popularity of every industry field in each year, from 1970 to 2014. Our goal was to show how the demands for each field alters year by year. Just select a year on the drop down menu to observe the popularity of different industry in that particular year!"),
+            p("This Chart displays the popularity of every industry field in each year, from 1970 to 2014. Our goal was to show how the demands for each 
+
+              field alters year by year. Just select a year on the drop down menu to observe the popularity of different industry in that particular year!"),
             sidebarLayout(
               sidebarPanel(width = 2,
                            selectInput(inputId = "historys",
