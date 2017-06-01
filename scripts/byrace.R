@@ -10,6 +10,7 @@ colnames(first.years) <- gsub("X", "", colnames(first.years))
 colnames(second.years) <- gsub("\\.", " ", colnames(second.years))
 colnames(second.years) <- gsub("X", "", colnames(second.years))
 
+# Builds the bar chart based on selected year and race
 RacesChart <- function(year, races) {
   
   majors <- first.years[2:37, 'Field of study']

@@ -2,6 +2,8 @@
 library(dplyr)
 males.data <- read.csv("data/Bach_Degrees_Males.csv", header = TRUE, stringsAsFactors = FALSE)
 females.data <- read.csv("data/Bach_Degrees_Females.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# Cleans up the column names
 colnames(males.data) <- gsub("\\.", " ", colnames(males.data))
 colnames(males.data) <- gsub("X", "", colnames(males.data))
 colnames(females.data) <- gsub("\\.", " ", colnames(females.data))

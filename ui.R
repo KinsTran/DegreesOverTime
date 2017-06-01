@@ -9,8 +9,6 @@ shinyUI(
     "Bachelor Degrees Over Time",
     tabPanel("Intro",
              titlePanel("Postsecondary Education in the United States"),
-               # Intro - Probably take it from the Project Proposal we wrote
-               # Include citations (?) for where we got our data set
              mainPanel(
                h3("As current college students..."),
                p("We often wonder about the diversity of those pursuing postsecondary education - primarily the ones 
@@ -78,10 +76,10 @@ shinyUI(
    ),
    tabPanel("History",
             titlePanel("Bachelor Degrees Popularity in Each Year"),
-            p("This Chart displays the popularity of every industry field in each year, from 1970 to 2014. Our goal was to show how the demands for each 
-
-              field alters year by year. Throughout the years, the popularity of degrees in education gradually decreased, while the demand for business degrees increased, becoming one of the most popular fields as we approach today. 
-            Just select a year on the drop down menu to observe the popularity of different industry in that particular year!"),
+            p("This Chart displays the popularity of every industry field in each year, from 1970 to 2014. Our goal was to show how the demands for each field 
+              alters year by year. Throughout the years, the popularity of degrees in education gradually decreased, while the demand for business degrees increased, 
+              becoming one of the most popular fields as we approach today. Just select a year on the drop down menu to observe the popularity of different industry 
+              in that particular year!"),
             sidebarLayout(
               sidebarPanel(width = 2,
                            selectInput(inputId = "historys",
@@ -89,7 +87,7 @@ shinyUI(
                                        choices = c("1970-71","1975-76","1980-81","1985-86","1990-91","1995-96","2000-01","2004-05","2005-06","2006-07"
                                                    ,"2007-08","2008-09","2009-10","2010-11","2011-12","2012-13","2013-14","2014-15"))
               ),
-              mainPanel( # Plan: Add option to toggle majors by groups: Ex: STEM, Social sciences, Humanities, etc.
+              mainPanel(
                 plotlyOutput("history")
               )
             )

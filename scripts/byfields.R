@@ -2,9 +2,12 @@ library(dplyr)
 library(plotly)
 
 df <- read.csv("data/Bach_Degrees.csv", header = TRUE, stringsAsFactors = FALSE)
+
+# Cleans up the column names
 colnames(df) <- gsub("\\.", "-", colnames(df))
 colnames(df) <- gsub("X", "", colnames(df))
 
+# Builds a bar chart based upon the year chosen
 FieldsChart <- function(history) {
   
   majors <- df[2:34, 'Field-of-study']
