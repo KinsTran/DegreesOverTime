@@ -6,6 +6,7 @@ library(plotly)
 source('./scripts/byrace.R')
 source('./scripts/byGender.R')
 source('./scripts/byfields.R')
+source('./scripts/graduate.R')
 
 
 shinyServer(function(input, output) { 
@@ -19,6 +20,10 @@ shinyServer(function(input, output) {
      
    output$history <- renderPlotly({
      return(FieldsChart(input$historys))
+   })
+   
+   output$graduate <- renderPlotly({
+     return(GradChart(input$level, input$field))
    })
    
   # output$degrees 

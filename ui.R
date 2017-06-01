@@ -89,6 +89,60 @@ shinyUI(
                 plotlyOutput("history")
               )
             )
+   ),
+   tabPanel("Graduate",
+            titlePanel("Graduate Degrees Over Time"),
+            p("This is a line plot of the number of master's/doctor's degrees given from 1970 to 2015.
+              From the data, we can see that there are significantly more master's degrees conferred than doctor's degrees.
+              In addition, the total number of master's or doctor's degrees conferred seems to increase linearly over time,
+              but this is interestingly different when looking at different fields of study.
+              For example, the number computer science master's degrees had a slight jump in the early 2000s and decayed a bit before steadily increasing again.
+              Some graphs are even more complex than that, such as the ethnic/cultural studies field which fluctuates quite a bit over time."),
+            sidebarLayout(
+              sidebarPanel(selectInput(inputId = 'level',
+                                       label = 'Degree Level',
+                                       choices = c("Master's Degrees", "Doctor's Degrees")),
+                           selectInput(inputId = 'field',
+                                       label = 'Field of Study',
+                                       choices = c("Total",
+                                                   "Agriculture and natural resources",
+                                                   "Architecture and related services",
+                                                   "Area, ethnic, cultural, gender, and group studies",
+                                                   "Biological and biomedical sciences",
+                                                   "Business",
+                                                   "Communication, journalism, and related programs",
+                                                   "Communications technologies",
+                                                   "Computer and information sciences",
+                                                   "Education",
+                                                   "Engineering",
+                                                   "Engineering technologies",
+                                                   "English language and literature/letters",
+                                                   "Family and consumer sciences/human sciences",
+                                                   "Foreign languages, literatures, and linguistics",
+                                                   "Health professions and related programs",
+                                                   "Homeland security, law enforcement, and firefighting",
+                                                   "Legal professions and studies",
+                                                   "Liberal arts and sciences, general studies, and humanities",
+                                                   "Library science",
+                                                   "Mathematics and statistics",
+                                                   "Military technologies and applied sciences",
+                                                   "Multi/interdisciplinary studies",
+                                                   "Parks, recreation, leisure, and fitness studies",
+                                                   "Philosophy and religious studies",
+                                                   "Physical sciences and science technologies",
+                                                   "Precision production",
+                                                   "Psychology",
+                                                   "Public administration and social services",
+                                                   "Social sciences and history",
+                                                   "Theology and religious vocations",
+                                                   "Transportation and materials moving",
+                                                   "Visual and performing arts",
+                                                   "Not classified by field of study"))
+                           ),
+              mainPanel(
+                plotlyOutput("graduate")
+              )
+            )
    )
   #,
   # tabPanel("Degrees",
