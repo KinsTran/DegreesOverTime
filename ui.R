@@ -51,7 +51,6 @@ shinyUI(
                   plotlyOutput("race")
                 )
              )
-             
    )
    ,
    tabPanel("Gender",
