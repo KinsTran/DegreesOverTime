@@ -7,7 +7,7 @@ shinyUI(
   navbarPage(
     theme = shinytheme("yeti"),
     "Bachelor Degrees Over Time",
-    tabPanel("Intro",
+    tabPanel("About",
              titlePanel("Postsecondary Education in the United States"),
              mainPanel(
                h3("As current college students..."),
