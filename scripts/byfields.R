@@ -24,7 +24,7 @@ FieldsChart <- function(history) {
     layout(title = new.title, xaxis = list(title = 'Majors', tickangle = 45),
            yaxis = list(title = 'Amount'), 
            barmode = 'group',
-           autosize = F,
+           autosize = T,
            margin = list(b = 300, r = 200, t = 50))
   
   return(p)
