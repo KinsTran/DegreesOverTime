@@ -29,11 +29,16 @@ shinyUI(
    ,
    tabPanel("Gender",
             titlePanel("Bachelor Degrees by Gender"),
+            p("This panel illustrates the differences in degree choices by men and women from 2013 to 2015. Many STEM related majors, such as "),
             sidebarLayout(
-              sidebarPanel(width = 2,
-                           checkboxGroupInput("genders", label = "Gender and School Year to Display",
-                           choices = list("Females 2013-2014" = "F1", "Males 2013-2014" = "M1", "Females 2014-2015" = "F2", "Males 2014-2015" = "M2"),
-                           selected = list("F1", "M1", "F2", "M2"))
+              sidebarPanel(
+                 width = 2,
+                 checkboxGroupInput("genders", label = "Gender and School Year to Display",
+                   choices = list("Females 2013-2014" = "F1", "Males 2013-2014" = "M1", "Females 2014-2015" = "F2", "Males 2014-2015" = "M2"),
+                   selected = list("F1", "M1", "F2", "M2")),
+                 checkboxGroupInput("majors", label = "Types of Majors to Display", 
+                    choices = list("Science" = "Science", "Arts" = "Arts", "Other" = "Other"),
+                    selected = list("Science", "Arts", "Other"))
               ),
               mainPanel( # Plan: Add option to toggle majors by groups: Ex: STEM, Social sciences, Humanities, etc.
                 plotlyOutput("gender")
