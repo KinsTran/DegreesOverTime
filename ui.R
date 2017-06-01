@@ -53,6 +53,7 @@ shinyUI(
    tabPanel("History",
             titlePanel("Bachelor Degrees Popularity in Each Year"),
             sidebarLayout(
+              #Create a graph to display the popularity of every industry field in each year.
               sidebarPanel(width = 2,
                            selectInput(inputId = "history",
                                        label = "Select Year",
