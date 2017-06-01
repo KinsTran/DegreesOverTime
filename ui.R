@@ -37,11 +37,25 @@ shinyUI(
             sidebarLayout(
               sidebarPanel(width = 2,
                            checkboxGroupInput("genders", label = "Gender and School Year to Display",
-                           choices = list("Females 2013-2014" = "F1", "Males 2013-2014" = "M1", "Females 2014-2015" = "F2", "Males 2014-2015" = "M2"),
-                           selected = list("F1", "M1", "F2", "M2"))
+                                              choices = list("Females 2013-2014" = "F1", "Males 2013-2014" = "M1", "Females 2014-2015" = "F2", "Males 2014-2015" = "M2"),
+                                              selected = list("F1", "M1", "F2", "M2"))
               ),
               mainPanel( # Plan: Add option to toggle majors by groups: Ex: STEM, Social sciences, Humanities, etc.
                 plotlyOutput("gender")
+              )
+            )
+   ),
+   tabPanel("History",
+            titlePanel("Bachelor Degrees Popularity in Each Year"),
+            sidebarLayout(
+              sidebarPanel(width = 2,
+                           selectInput(inputId = "history",
+                                       label = "Select Year",
+                                       choices = c("1970","1975","1980","1985","1990","1995","2000","2004","2005","2006"
+                                                   ,"2007","2008","2009","2010","2011","2012","2013","2014"))
+              ),
+              mainPanel( # Plan: Add option to toggle majors by groups: Ex: STEM, Social sciences, Humanities, etc.
+                plotlyOutput("history")
               )
             )
    )

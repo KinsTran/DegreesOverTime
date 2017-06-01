@@ -5,6 +5,8 @@ library(plotly)
 
 source('./scripts/byrace.R')
 source('./scripts/byGender.R')
+source('./scripts/byfields.R')
+
 
 shinyServer(function(input, output) { 
   output$race <- renderPlotly({
@@ -15,6 +17,9 @@ shinyServer(function(input, output) {
      return(GenderChart(input$genders))
    })
      
+   output$history <- renderPlotly({
+     return(GenderChart(input$history))
+   })
   # output$degrees 
   
 })
