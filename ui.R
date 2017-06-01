@@ -38,7 +38,7 @@ shinyUI(
    ,
    tabPanel("Gender",
             titlePanel("Bachelor Degrees by Gender"),
-            p("This panel illustrates the differences in degree choices by men and women from 2013 to 2015. Many STEM related majors, such as "),
+            p("This panel illustrates the differences in degree choices by men and women from 2013 to 2015. Majors were sorted into categories depending upon UW's closest equivalent (", a("Link", href = "https://www.washington.edu/students/gencat/degree_programsTOC.html"), "), or another source if not applicable. Many STEM related majors, such as Computer Science and Engineering, are dominated by males, although the Health sector is predominantly occupied by women, to a far greater extent than many of the other Science majors combined. In the Arts, females have a much larger population than males, save for a few majors such as Business and History, as well as in other majors such as Education and Psychology."),
             sidebarLayout(
               sidebarPanel(
                  width = 2,
@@ -47,9 +47,9 @@ shinyUI(
                    selected = list("F1", "M1", "F2", "M2")),
                  checkboxGroupInput("majors", label = "Types of Majors to Display", 
                     choices = list("Science" = "Science", "Arts" = "Arts", "Other" = "Other"),
-                    selected = list("Science", "Arts", "Other"))
+                    selected = list("Science"))
               ),
-              mainPanel( # Plan: Add option to toggle majors by groups: Ex: STEM, Social sciences, Humanities, etc.
+              mainPanel(
                 plotlyOutput("gender")
               )
             )
