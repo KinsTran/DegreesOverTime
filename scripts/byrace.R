@@ -30,6 +30,12 @@ RacesChart <- function(year, races) {
     label1 <- '2014-15 Majors'
   }
   
+  if(races != "Total") {
+    graph.title <- paste0(year, " Degrees by ", races)
+  } else {
+    graph.title <- paste0(year, " Degrees")
+  }
+  
   p <- plot_ly(
     x = ~majors,
     y = ~amounts1,
@@ -37,7 +43,8 @@ RacesChart <- function(year, races) {
     name = label1,
     width = 1500,
     height = 700) %>%
-    layout(xaxis = list(title = 'Majors', tickangle = 45),
+    layout(title = graph.title,
+           xaxis = list(title = 'Majors', tickangle = 45),
            yaxis = list(title = 'Amount'), 
            barmode = 'group',
            autosize = F,
