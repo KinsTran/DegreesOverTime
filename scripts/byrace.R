@@ -13,7 +13,7 @@ colnames(first.years) <- gsub("X", "", colnames(first.years))
 colnames(second.years) <- gsub("\\.", " ", colnames(second.years))
 colnames(second.years) <- gsub("X", "", colnames(second.years))
 
-BuildGraph <- function(year, races) {
+RacesChart <- function(year, races) {
   
   majors <- first.years[2:37, 'Field of study']
   
