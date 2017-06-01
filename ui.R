@@ -83,8 +83,8 @@ shinyUI(
               sidebarPanel(width = 2,
                            selectInput(inputId = "historys",
                                        label = "Select Year",
-                                       choices = c("1970","1975","1980","1985","1990","1995","2000","2004","2005","2006"
-                                                   ,"2007","2008","2009","2010","2011","2012","2013","2014"))
+                                       choices = c("1970-71","1975-76","1980-81","1985-86","1990-91","1995-96","2000-01","2004-05","2005-06","2006-07"
+                                                   ,"2007-08","2008-09","2009-10","2010-11","2011-12","2012-13","2013-14","2014-15"))
               ),
               mainPanel( # Plan: Add option to toggle majors by groups: Ex: STEM, Social sciences, Humanities, etc.
                 plotlyOutput("history")
