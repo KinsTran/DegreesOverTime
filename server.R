@@ -18,7 +18,7 @@ shinyServer(function(input, output) {
    })
      
    output$history <- renderPlotly({
-     return(GenderChart(input$history))
+     return(FieldsChart(input$historys))
    })
    
   # output$degrees 
