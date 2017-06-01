@@ -79,7 +79,8 @@ shinyUI(
             titlePanel("Bachelor Degrees Popularity in Each Year"),
             p("This Chart displays the popularity of every industry field in each year, from 1970 to 2014. Our goal was to show how the demands for each 
 
-              field alters year by year. Just select a year on the drop down menu to observe the popularity of different industry in that particular year!"),
+              field alters year by year. Throughout the years, the popularity of degrees in education gradually decreased, while the demand for business degrees increased, becoming one of the most popular fields as we approach today. 
+            Just select a year on the drop down menu to observe the popularity of different industry in that particular year!"),
             sidebarLayout(
               sidebarPanel(width = 2,
                            selectInput(inputId = "historys",
