@@ -26,8 +26,8 @@ shinyUI(
                  #                         "American Indian/Alaska Native" = "AIAN", "Two or More Races" = "TMR", "Non Resident Alien" = "NRA"))
                  selectInput(inputId = "races",
                              label = "Select Race to Filter Down to",
-                             choices = c("All", "White" = "W", "Black" = "B", "Hispanic" = "H", "Asian" = "A", "Pacific Islander" = "PI", 
-                                         "American Indian/Alaska Native" = "AIAN", "Two or More Races" = "TMR", "Non Resident Alien" = "NRA"))
+                             choices = c("All" = "Total", "White", "Black", "Hispanic", "Asian", "Pacific Islander" = "PI", 
+                                         "American Indian/Alaska Native" = "American Indian Alaska Native", "Two or More Races", "Non Resident Alien"))
                ), 
                mainPanel(
                   plotlyOutput("race")
